@@ -1,9 +1,9 @@
 (library
- (name twiddle)
- (modules twiddle)
+ (name hello)
+ (modules hello)
  (preprocess (pps bisect_ppx --conditional --no-comment-parsing)))
 
 (executable
  (name tester)
  (modules tester)
- (libraries twiddle))
+ (libraries hello))
