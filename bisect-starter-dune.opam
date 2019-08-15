@@ -1,0 +1,17 @@
+opam-version: "2.0"
+
+synopsis: "Bisect_ppx + Dune starter repo"
+homepage: "https://github.com/aantron/bisect-starter-dune"
+bug-reports: "https://github.com/aantron/bisect_ppx/issues"
+authors: "Anton Bachin <antonbachin@yahoo.com>"
+maintainer: "Anton Bachin <antonbachin@yahoo.com>"
+
+depends: [
+  "bisect_ppx" {dev & >= "1.5.0"}
+  "dune"
+  "ocaml"
+]
+
+pin-depends: [
+  ["bisect_ppx.git" "git+https://github.com/aantron/bisect_ppx.git"]
+]
