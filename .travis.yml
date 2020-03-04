@@ -1,0 +1,27 @@
+language: generic
+
+before_script:
+  - wget https://github.com/ocaml/opam/releases/download/2.0.6/opam-2.0.6-x86_64-linux
+  - sudo mv opam-2.0.6-x86_64-linux /usr/local/bin/opam
+  - sudo chmod a+x /usr/local/bin/opam
+  - opam init -y --compiler 4.10.0 --disable-sandboxing
+  - eval `opam env`
+  - ocaml -version
+
+script:
+  - opam install -y --deps-only .
+  - BISECT_ENABLE=yes dune build ./tester.exe
+  - dune exec ./tester.exe
+  - dune exec bisect-ppx-report -- html
+  - cat _coverage/index.html
+  - dune exec bisect-ppx-report -- summary
+
+cache:
+  directories:
+    - $HOME/.opam
+    - ./_opam
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always

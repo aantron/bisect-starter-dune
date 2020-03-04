@@ -6,7 +6,7 @@ cd bisect-starter-dune
 opam install -y --deps-only .
 BISECT_ENABLE=yes dune build ./tester.exe
 dune exec ./tester.exe
-dune exec bisect-ppx-report -- --html _coverage/ *.out
+dune exec bisect-ppx-report -- html
 ```
 
 These commands generate

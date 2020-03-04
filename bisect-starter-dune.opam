@@ -7,7 +7,7 @@ authors: "Anton Bachin <antonbachin@yahoo.com>"
 maintainer: "Anton Bachin <antonbachin@yahoo.com>"
 
 depends: [
-  "bisect_ppx" {dev & >= "1.5.0"}
+  "bisect_ppx" {dev & >= "2.0.0"}
   "dune"
   "ocaml"
 ]
