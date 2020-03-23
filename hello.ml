@@ -4,4 +4,4 @@ let run () =
   if Random.int 2 = 0 then
     print_endline "Hello, world!"
   else
-    print_endline "Goodbye, world :("
+    print_endline "We come in peace."
