@@ -4,8 +4,7 @@
 git clone https://github.com/aantron/bisect-starter-dune.git
 cd bisect-starter-dune
 opam install -y --deps-only .
-BISECT_ENABLE=yes dune build ./tester.exe
-dune exec ./tester.exe
+BISECT_ENABLE=yes dune exec ./tester.exe
 dune exec bisect-ppx-report -- html
 ```
 
