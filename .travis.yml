@@ -19,8 +19,3 @@ cache:
   directories:
     - $HOME/.opam
     - ./_opam
-
-notifications:
-  email:
-    on_success: always
-    on_failure: always
