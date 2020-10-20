@@ -7,7 +7,7 @@ opam install -y --deps-only .
 
 find . -name '*.coverage' | xargs rm -f
 dune runtest --instrument-with bisect_ppx --force
-dune exec bisect-ppx-report -- html
+bisect-ppx-report html
 ```
 
 These commands generate

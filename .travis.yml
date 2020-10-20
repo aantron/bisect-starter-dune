@@ -11,9 +11,9 @@ before_script:
 script:
   - opam install -y --deps-only .
   - dune runtest --instrument-with bisect_ppx --force
-  - dune exec bisect-ppx-report -- html
+  - bisect-ppx-report html
   - cat _coverage/index.html
-  - dune exec bisect-ppx-report -- summary
+  - bisect-ppx-report summary
 
 cache:
   directories:
