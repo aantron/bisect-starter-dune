@@ -6,7 +6,7 @@ cd bisect-starter-dune
 opam install -y --deps-only .
 
 find . -name '*.coverage' | xargs rm -f
-dune exec --instrument-with bisect_ppx ./tester.exe
+dune runtest --instrument-with bisect_ppx --force
 dune exec bisect-ppx-report -- html
 ```
 

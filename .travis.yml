@@ -10,7 +10,7 @@ before_script:
 
 script:
   - opam install -y --deps-only .
-  - dune exec --instrument-with bisect_ppx ./tester.exe
+  - dune runtest --instrument-with bisect_ppx --force
   - dune exec bisect-ppx-report -- html
   - cat _coverage/index.html
   - dune exec bisect-ppx-report -- summary

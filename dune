@@ -7,3 +7,7 @@
  (name tester)
  (modules tester)
  (libraries hello))
+
+(rule
+ (alias runtest)
+ (action (run %{exe:tester.exe})))
