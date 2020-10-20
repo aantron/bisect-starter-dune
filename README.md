@@ -4,6 +4,8 @@
 git clone https://github.com/aantron/bisect-starter-dune.git
 cd bisect-starter-dune
 opam install -y --deps-only .
+
+find . -name '*.coverage' | xargs rm -f
 dune exec --instrument-with bisect_ppx ./tester.exe
 dune exec bisect-ppx-report -- html
 ```
